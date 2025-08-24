@@ -12,6 +12,8 @@ jobs:
       run:
         working-directory: backend/core
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: Install dependencies
         uses: ./.github/actions/setup-node
       - name: Run tests
